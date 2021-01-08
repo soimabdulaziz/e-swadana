@@ -1,0 +1,20 @@
+
+.fixed-thead table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+}
+
+.fixed-thead, .fixed-thead-head {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.fixed-thead-side, .fixed-thead-corner {
+  position: absolute !important;
+  left: 0 !important;
+  overflow: hidden !important;
+}
+
+.fixed-thead-corner { top: 0 !important; }
+
+.fixed-thead-body { overflow: auto !important; }
