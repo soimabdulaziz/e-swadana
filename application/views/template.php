@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Koperasi|E-Swadana</title>
+  <title></title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="<?=base_url()?>/assets/bower_components/bootstrap/dist/css/bootstrap-select.min.css">
+  
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -39,9 +42,9 @@
     <!-- Logo -->
     <a href="" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>E</b>SW</span>
+      <span class="logo-mini"><b></b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b></b>E-Swadana</span>
+      <span class="logo-lg"><b></b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -52,14 +55,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?=base_url()?>/assets/dist/img/user.png" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?=ucfirst($this->fungsi->user_login()->nama)?></span>
+              <span class="hidden-xs"></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -67,7 +69,7 @@
                 <img src="<?=base_url()?>/assets/dist/img/user.png" class="img-circle" alt="User Image">
 
                 <p>
-                  <?=ucfirst($this->fungsi->user_login()->username)?>
+                 
                 </p>
               </li>
               <!-- Menu Body -->
@@ -75,7 +77,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="<?=base_url()?>ganti_pass" class="btn btn-default btn-flat">Ganti Password</a>
+                 
                 </div>
                 <div class="pull-right">
                   <a href="<?=base_url()?>/auth/logout" class="btn btn-default btn-flat">Sign out</a>
@@ -85,7 +87,7 @@
           </li>
           <!-- Control Sidebar Toggle Button -->
           <li>
-            <a disabled> <i class="fa fa fa-calendar"> <?php echo date('d-m-y') ?> </i></a>
+           
             
           </li>
         </ul>
@@ -113,83 +115,17 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
 
-        <li><a href="<?=site_url('Dashboard')?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <?php if($this->session->userdata('Level') == 1) { ?>
-        <li><a href="<?=site_url('Pengeluaran')?>"><i class="fa fa-minus-square-o"></i> <span>Pengeluaran</span></a></li>
-        <?php } ?>
-        <?php if($this->session->userdata('Level') == 1) { ?>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-file"></i> <span>Laporan</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?=base_url('Laporan_wajib')?>"><i class="fa fa-circle-o"></i> Laporan Simpanan Wajib</a></li>
-            <li><a href="<?=base_url('Laporan_sukarela')?>"><i class="fa fa-circle-o"></i> Laporan Simpanan Sukarela</a></li>
-            <li><a href="<?=base_url('Laporan_saldo_sukarela')?>"><i class="fa fa-circle-o"></i> Laporan Saldo SSR</a></li>
-            <li><a href="<?=base_url('Laporan_piutang')?>"><i class="fa fa-circle-o"></i> Laporan Angsuran Piutang</a></li>
-            <li><a href="<?=base_url('Laporan_jasa_piutang')?>"><i class="fa fa-circle-o"></i> Laporan Jasa Piutang</a></li>
-
-
-          </ul>
-          
-        </li>
-        </li>
-   
-        <li><a href="<?=site_url('anggota')?>"><i class="fa fa-user"></i> <span>Anggota</span></a></li>
-      
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-balance-scale"></i> <span>Neraca</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?=base_url('Neraca')?>"><i class="fa fa-circle-o"></i>Preview Neraca</a></li>
-            <li><a href="<?=base_url('Export_neraca')?>"><i class="fa fa-circle-o"></i>Export Neraca</a></li>
-          
-          </ul>
-          
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-line-chart"></i> <span>Shu</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?=base_url('Shu')?>"><i class="fa fa-circle-o"></i>Preview Shu</a></li>
-            <li><a href="<?=base_url('Export_shu')?>"><i class="fa fa-circle-o"></i>Export Shu</a></li>
-          
-          </ul>
-          
-        </li>
-        
-        <li>
-             <a href="<?=site_url('sirkulasi')?>"><i class="fa fa-exchange"></i><span>Sirkulasi</span></a>
+        <li class="nav-item">
+          <a href="<?=site_url('Dashboard')?>"> <span>Dashboard</span></a>
         </li>
         <li class="nav-item">
-             <a href="<?=site_url('master')?>"><i class="fa fa-database"></i><span>Data Master</span></a>
-        </li>
-        <?php } ?>
-        <li class="nav-item">
-             <a href="<?=site_url('simpanan_pokok')?>"><i class="fa fa-money"></i><span>Simpanan Pokok</span></a>
+          <a href="<?=site_url('Provider')?>"> <span>Provider</span></a>
         </li>
         <li class="nav-item">
-             <a href="<?=site_url('simpanan_wajib')?>"><i class="fa fa-money"></i><span>Simpanan Wajib</span></a>
+             <a href="<?=site_url('Survey')?>"><span>Survey</span></a>
         </li>
         <li class="nav-item">
-             <a href="<?=site_url('simpanan_sukarela')?>"><i class="fa fa-money"></i><span>Simpanan Sukarela</span></a>
-        </li>
-        <li class="nav-item">
-             <a href="<?=site_url('piutang')?>"><i class="fa fa-balance-scale"></i><span>Piutang</span></a>
-        </li>
-        <li class="nav-item">
-             <a href="<?=site_url('jasa')?>"><i class="fa  fa-bank"></i><span>Jasa</span></a>
+             <a href="<?=site_url('User')?>"><span>User</span></a>
         </li>
     </section>
     <!-- /.sidebar -->
@@ -209,7 +145,7 @@
     <div class="pull-right hidden-xs">
       <b></b> 
     </div>
-    <strong>Copyright &copy; 2020 <a href="">E-Swadana</a>.</strong> SMA N 1 Prambanan
+    <strong>Copyright &copy; 2021 <a href="">Survey Tower</a>.</strong>
   </footer>
 
   <!-- Control Sidebar -->
@@ -434,7 +370,7 @@
 <script>
   $(function () {
     $('#example1').DataTable({
-      order : [0, 'desc'],
+      order : [0, 'asc'],
       buttons : [
     'excel', 'csv', 'pdf',
   ],
