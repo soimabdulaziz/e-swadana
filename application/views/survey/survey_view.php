@@ -64,7 +64,7 @@
                                 if ($level == "1") {                            
                             ?>
                             <td nowrap><a href="<?php echo site_url('Survey/detail/'.$data['id_survei']) ?>" class="btn btn-success btn-sm position-sticky"><i class="fa fa-file"></i>Detail</a>
-                            <a href="<?php echo site_url('Survey/add/'.$data['id_survei'].'/'.$data['id_foto']) ?>" class="btn btn-warning btn-sm position-sticky"><i class="fa fa-edit"></i>Edit</a>
+                            <a href="<?php echo site_url('Survey/add/'.$data['id_survei'].'/'.$data['id_foto'].'/?id='.$data['id_tower']) ?>" class="btn btn-warning btn-sm position-sticky"><i class="fa fa-edit"></i>Edit</a>
                             <a  onclick="return konfirmasi('<?php echo $data['id_survei'];?>')" href="<?php echo site_url('Survey/delete/'.$data['id_survei'].'/'.$data['id_foto']) ?>" class="btn btn-danger btn-sm position-sticky"><i class="fa fa-trash"></i>Delete</a>
                             </td>
                       <?php } ?>

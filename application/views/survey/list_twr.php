@@ -50,7 +50,7 @@
                           $level = $this->session->userdata('level');
                                 if ($level == "1") {                            
                             ?>
-                            <td nowrap><a href="<?php echo site_url('Survey/add/'.$data['id_tower']) ?>" class="btn btn-success btn-sm position-sticky"><i class="fa fa-file"></i> Isi Survey</a>
+                            <td nowrap><a href="<?php echo site_url('Survey/add/?id='.$data['id_tower']) ?>" class="btn btn-success btn-sm position-sticky"><i class="fa fa-file"></i> Isi Survey</a>
                             </td>
                       <?php } ?>
                     </tr>

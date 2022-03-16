@@ -14,7 +14,7 @@
 
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Isi Survey <?php echo $this->uri->segment(3)?></h3>
+              <h3 class="box-title">Isi Survey <?php echo $_GET['id']?></h3>
             <div class="pull-right">
               <a href ="<?=site_url('Survey/list_tower') ?>" class="btn btn-warning btn-flat">
                   <i class="fa fa-undo"></i> Back
