@@ -53,9 +53,8 @@ class Survey extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE) {
 			if(!empty($this->uri->segment(4))) {
-				$this->db->select("*")->from("survei");
-				$this->db->where("id_survei", $id);
-				$q = $this->db->get();
+				$id = $this->uri->segment(3);
+				$q = $this->db->query("SELECT * FROM survei a INNER JOIN tabel_tower b ON a.id_tower = b.id_tower INNER JOIN foto c ON a.id_survei = c.id_survei  WHERE a.id_survei = $id");
 				$d = $q->result_array();
 				@$data['d'] = $d[0];
 			}
@@ -258,13 +257,14 @@ class Survey extends CI_Controller {
 			$this->load->library('upload', $config);
             if ($this->upload->do_upload('image') && $this->upload->do_upload('image2')){
 				$id_survei = $this->Survey_model->max_id_survey();
-                $post['image'] = $this->upload->data('file_name');
-                $post['image2'] = $this->upload->data('file_name');
 				$post['id_survei'] = $id_survei+1;
+				echo $post['id_survei'];
+               /*  $post['image'] = $this->upload->data('file_name');
+                $post['image2'] = $this->upload->data('file_name');
                 //$post = $this->input->post(null, TRUE);
                 $this->Survey_model->add($post);
                 $this->session->set_flashdata('success', 'Data berhasil disimpan');
-                redirect("Survey");
+                redirect("Survey"); */
             } else {
                 $error = $this->upload->display_errors();
                 $this->session->set_flashdata('delete', $error);

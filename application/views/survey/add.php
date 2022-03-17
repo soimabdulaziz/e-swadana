@@ -139,6 +139,9 @@
 
                           <span class="help-block"></span> 
                     </div>
+                    <?php $id= $this->uri->segment(3);
+                    if(empty($id)) {
+                    ?>
                       <div class="form-group">
                           <label>Image*</label>
                           <input type ="file" name="image" id="image" class="form-control" required>
@@ -149,6 +152,18 @@
                           <input type ="file" name="image2" id="image2" class="form-control" required>
 
                       </div>
+                      <?php } else { ?>
+                       <div class="form-group">
+                         <label>Foto Lokasi :</label>
+                       <tr>
+                          <td><img src="<?=site_url('uploads/'.@$d['image']) ?>" style="width:100px;">
+                          </td>
+                          <td><img src="<?=site_url('uploads/'.@$d['nama_file']) ?>" style="width:100px;">
+                          </td>
+                          
+                        </tr> 
+                       </div>
+                        <?php } ?>
                       <div class="form-group">
                         <button type= "submit" class="btn btn-success">
                           <i class="fa fa-paper-plane"></i>Save

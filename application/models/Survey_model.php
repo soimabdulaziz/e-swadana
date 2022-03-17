@@ -22,7 +22,7 @@ class Survey_model extends CI_Model {
     }
 
     public function max_id_survey() {
-       $q = $this->db->query("SELECT MAX(id_survei) as id_survei FROM survei");
+       $q = $this->db->query("SELECT MAX(id_survei) as id_survei FROM foto");
        $d = $q->row()->id_survei;
        return $d;
     }
