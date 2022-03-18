@@ -27,9 +27,9 @@
                   <div class="col-md-4 col-md-offset-4">
                     <?php echo validation_errors(); ?>
                     <?php if(!empty($this->uri->segment(4))) {
-                      echo form_open_multipart('Survey/edit/'.$this->uri->segment(3).'/'.$this->uri->segment(4).'');
+                      echo form_open_multipart('Survey/edit/'.$_GET['id'].'/'.$this->uri->segment(4).'');
                     } else {
-                      echo form_open_multipart('Survey/do_upload/'.$this->uri->segment(3).'');
+                      echo form_open_multipart('Survey/do_upload/'.$_GET['id'].'');
                     }?>
                     <div class ="form-group">
                     <label>Tanggal *</label>

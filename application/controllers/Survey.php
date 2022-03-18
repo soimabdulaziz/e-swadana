@@ -258,13 +258,13 @@ class Survey extends CI_Controller {
             if ($this->upload->do_upload('image') && $this->upload->do_upload('image2')){
 				$id_survei = $this->Survey_model->max_id_survey();
 				$post['id_survei'] = $id_survei+1;
-				echo $post['id_survei'];
-               /*  $post['image'] = $this->upload->data('file_name');
+				//echo $post['id_survei'];
+                $post['image'] = $this->upload->data('file_name');
                 $post['image2'] = $this->upload->data('file_name');
                 //$post = $this->input->post(null, TRUE);
                 $this->Survey_model->add($post);
                 $this->session->set_flashdata('success', 'Data berhasil disimpan');
-                redirect("Survey"); */
+                redirect("Survey");
             } else {
                 $error = $this->upload->display_errors();
                 $this->session->set_flashdata('delete', $error);
