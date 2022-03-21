@@ -370,7 +370,7 @@
 <script>
   $(function () {
     $('#example1').DataTable({
-      order : [0, 'asc'],
+      order : [0, 'desc'],
       buttons : [
     'excel', 'csv', 'pdf',
   ],

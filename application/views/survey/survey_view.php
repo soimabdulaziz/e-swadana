@@ -49,7 +49,7 @@
                     $no = 1;
                     foreach ($survey as $data) { ?>
                     <tr>
-                      <td><?php echo $data['id_survei'] ?></td>
+                      <td><?php echo $no ?></td>
                       <?php $tanggal = $data['tanggal']; ?>
                       <td><?php echo date('d F Y', strtotime(''.$tanggal.''));?> </td>
                       <td> <?php echo $data['id_tower'] ?> </td>
