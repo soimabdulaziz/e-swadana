@@ -15,11 +15,11 @@ class Survey_model extends CI_Model {
         $data['nama_file'] = $post['image'];
         $this->db->insert("foto", $data);
     }
-    public function add_image2($post) {
+  /*   public function add_image2($post) {
         $data['id_survei'] = $post['id_survei'];
         $data['nama_file'] = $post['image2'];
         $this->db->insert("foto", $data);
-    }
+    } */
 
     public function max_id_survey() {
        $q = $this->db->query("SELECT MAX(id_survei) as id_survei FROM foto");

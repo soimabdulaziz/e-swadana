@@ -225,7 +225,7 @@ class Survey extends CI_Controller {
 		
 	}
 
-	function uploadimg2d(){
+	/* function uploadimg2d(){
 		$id_survei = $this->Survey_model->max_id_survey();
 		$config['upload_path'] = './uploads/';
 		$config['allowed_types'] =  'gif|jpg|png|jpeg';
@@ -236,10 +236,10 @@ class Survey extends CI_Controller {
 			$post['image2'] = $this->upload->data('file_name');
 			$post['id_survei'] = $id_survei+1;
 			//$post['image2'] = $this->upload->data('file_name');
-			$this->Survey_model->add_image2($post);
+			$this->Survey_model->add_imag($post);
 
 		}
-	}
+	} */
 
 
     function do_upload(){
@@ -257,7 +257,7 @@ class Survey extends CI_Controller {
 			$this->load->library('upload', $config);
             if ($this->upload->do_upload('image') && $this->upload->do_upload('image2')){
 				$id_survei = $this->Survey_model->max_id_survey();
-				$post['id_survei'] = $id_survei+1;
+				$post['id_survei'] = $id_survei;
 				//echo $post['id_survei'];
                 $post['image'] = $this->upload->data('file_name');
                 $post['image2'] = $this->upload->data('file_name');
